@@ -1,8 +1,55 @@
+html, body {
+    margin: 0; padding: 0;
+  }
+  .hero-bkg-animated {
+    background: gray url(https://subtlepatterns.com/patterns/geometry2.png) repeat 0 0;
+    width: 100%;
+    margin: 0;
+    height: 300px;
+    padding-top: 120px;
+    box-sizing: border-box;
+    -webkit-animation: slide 20s linear infinite;
+  }
+  
+  .hero-bkg-animated h1 {
+    font-family: sans-serif;
+  }
+  
+  @-webkit-keyframes slide {
+      from { background-position: 0 0; }
+      to { background-position: -400px 0; }
+  }
+  .container {
+      margin-top: -40px;
+  }
+  .jumbotron {
+      margin-top: 0px;
+      background-image: url(https://cdn.codemyui.com/wp-content/uploads/2016/11/Pure-CSS-Snow-Animation.gif);
+      color: white;
+  }
+  .row {
+      margin-bottom: 150px;
+  }
 .card-img-top {
     height: 175px;
+}
+.instructions {
+    font-size: 10px;
+    color: navy;
 }
 .btn,
 .btn-primary,
 .btn-lg {
     width: 152px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.score-1 {
+    margin-top: 20px;
+}
+.score {
+    height: 48px;
+}
+.crystals {
+    margin-bottom: 30px;
 }

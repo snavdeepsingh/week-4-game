@@ -10,54 +10,76 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script src="./assets/javascript/game.js"></script>
+
 </head>
 
-<body>
+<body class="hero-bkg-animated">
     <div class="container">
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <h1 class="display-4">Crystal Collector</h1>
-                <p class="lead">.</p>
+                <p class="lead">Rules of the game:</p>
+                <p class="instructions"><ol>
+                        <li>- You will be given a random numbe as a Goal.</li>
+                        <li>- By clicking on the crystal's name  you will add specific amount of points to your current Total. </li>
+                        <li>- You accumulate wins by matching your current total to the Goal.</li>
+                        <li>- You lose if your total exceeds the Goal.</li>
+                        <li>- Value of crystals is hidden from you until you click on it.</li>
+                        <li>- For every new game the value of crystal will change.</li>
+                </ol></p>
             </div>
         </div>
-        <div class="container row">
-                <div class="card col-3" style="width: 18rem;">
-                        <img class="card-img-top" src="./assets/images/june-birthstone-alexandrite-crystal-3.jpg" alt="Card image cap">
-                        <div class="card-body">
-                        <button type="button" class="btn btn-primary btn-lg">Alexandrite</button>
-                        </div>
+        <div class="row">
+            <div class="card col-3" style="width: 18rem;">
+                <img class="card-img-top" src="./assets/images/june-birthstone-alexandrite-crystal-3.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <button type="button" id="alexandrite" class="btn btn-primary btn-lg">Alexandrite</button>
                 </div>
-                <div class="card col-3" style="width: 18rem;">
-                        <img class="card-img-top" src="./assets/images/cc11807-grandidierite-madagascar-2017-12-20-13-54-02-c-ed.jpg" alt="Card image cap">
-                        <div class="card-body">
-                        <button type="button" class="btn btn-primary btn-lg">Grandidierite</button>
-                        </div>
+            </div>
+            <div class="card col-3" style="width: 18rem;">
+                <img class="card-img-top" src="./assets/images/cc11807-grandidierite-madagascar-2017-12-20-13-54-02-c-ed.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <button type="button" id="grandidierite" class="btn btn-primary btn-lg">Grandidierite</button>
                 </div>
-                <div class="card col-3" style="width: 18rem;">
-                        <img class="card-img-top" src="./assets/images/1redtaaff1i.JPG.w300h337.jpg" alt="Card image cap">
-                        <div class="card-body">
-                        <button type="button" class="btn btn-primary btn-lg">Taaffeite</button>
-                        </div>
+            </div>
+            <div class="card col-3" style="width: 18rem;">
+                <img class="card-img-top" src="./assets/images/1redtaaff1i.JPG.w300h337.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <button type="button" id="taaffeite" class="btn btn-primary btn-lg">Taaffeite</button>
                 </div>
-                <div class="card col-3" style="width: 18rem;">
-                        <img class="card-img-top" src="./assets/images/Ruby.jpg" alt="Card image cap">
-                        <div class="card-body">
-                        <button type="button" class="btn btn-primary btn-lg">Red Diamond</button>
-                        </div>
+            </div>
+            <div class="card col-3" style="width: 18rem;">
+                <img class="card-img-top" src="./assets/images/Ruby.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <button type="button" id="reddiamond" class="btn btn-primary btn-lg">Red Diamond</button>
                 </div>
+            </div>
+
+            <div class="card col-3" style="width: 18rem;">
+                <h1>Goal</h1>
+                <h1 id="goalTotal"></h1>
+            </div>
+            <div class="card col-3" style="width: 18rem;">
+                <h1>Current</h1>
+                <h1 id="currentTotal">0</h1>
+            </div>
+            <div class="card col-3" style="width: 18rem;">
+                <h1>Wins</h1>
+                <h1 id="wins">0</h1>
+            </div>
+            <div class="card col-3" style="width: 18rem;">
+                <h1>Losses</h1>
+                <h1 id="losses">0</h1>
+            </div>
         </div>
+
 
 
 
     </div>
 
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./assets/javascript/game.js"></script>
 
 </html>
